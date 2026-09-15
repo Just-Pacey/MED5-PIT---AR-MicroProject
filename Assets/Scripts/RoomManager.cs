@@ -20,20 +20,28 @@ public class RoomManager : MonoBehaviour
 
     private void OnRoomLoaded()
     {
-        Debug.Log("MRUK room loaded!");
+        Debug.Log("[RoomManager] MRUK room loaded!");
 
         MRUKRoom room = MRUK.Instance.GetCurrentRoom();
 
         if (room == null)
         {
-            Debug.LogError("MRUK loaded, but no room was found.");
+            Debug.LogError("[RoomManager] MRUK loaded, but no room was found.");
             return;
         }
 
-        Debug.Log("Room contains " + room.Anchors.Count + " anchors.");
+        Debug.Log("[RoomManager] Room contains " + room.Anchors.Count + " anchors.");
 
         // We have successfully found a room.
-        whiteRoom.SetActive(false);
+        if (whiteRoom != null)
+        {
+            whiteRoom.SetActive(false);
+        }
+
+        if (RoomFurnitureScanner.Instance != null)
+        {
+            RoomFurnitureScanner.Instance.ScanRoomFurniture();
+        }
     }
 
     private void OnDestroy()
