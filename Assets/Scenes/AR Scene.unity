@@ -870,8 +870,14 @@ MonoBehaviour:
   rayOrigin: {fileID: 93578524}
   floorLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   maxRayDistance: 10
+  floatDistance: 1.5
+  placeWithButton: 1
+  placeButton: 8192
+  placeController: 2
+  minHoverTime: 0.3
+  debugLogging: 1
 --- !u!4 &583056036
 Transform:
   m_ObjectHideFlags: 0
@@ -1386,15 +1392,6 @@ MonoBehaviour:
     Scaling: 0
     Alignment: 0
     IgnorePrefabSize: 0
-  - Labels: 1
-    Prefabs:
-    - {fileID: 56922379157829953, guid: 97b3d2eefb3197044b65ec8e9eedf4a9, type: 3}
-    PrefabSelection: 0
-    MatchAspectRatio: 0
-    CalculateFacingDirection: 0
-    Scaling: 0
-    Alignment: 0
-    IgnorePrefabSize: 0
 --- !u!114 &1234930326
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1425,6 +1422,69 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1471633246
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1471633254}
+  - component: {fileID: 1471633253}
+  - component: {fileID: 1471633251}
+  m_Layer: 7
+  m_Name: Floor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!64 &1471633251
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1471633246}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!33 &1471633253
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1471633246}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1471633254
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1471633246}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.63558, y: 0, z: -1.30213}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1596,3 +1656,4 @@ SceneRoots:
   - {fileID: 75988383}
   - {fileID: 1234930327}
   - {fileID: 583056036}
+  - {fileID: 1471633254}
